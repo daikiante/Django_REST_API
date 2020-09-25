@@ -9,6 +9,8 @@ from rest_framework import viewsets
 
 from .serializers import TaskSerializer, UserSerializer
 
+from .ownpermissions import ProfilePermission
+
 
 class UserViewSet(viewsets.ModelViewSet):
     # ModelViewSet : CRUD全て使えるようになっている
@@ -19,7 +21,7 @@ class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer
     
     # 誰でもアクセス可能
-    permission_class = (AllowAny,)
+    permission_class = (ProfilePermission,)
     
 
 class ManageUserView(generics.RetrieveUpdateAPIView):

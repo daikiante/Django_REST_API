@@ -44,9 +44,13 @@ INSTALLED_APPS = [
     # api : 作成したアプリ名
     # つまり「apiアプリケーション内のappsファイルのApiConfigクラス」を参照している
     'api.apps.ApiConfig',
+    # 
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
+    # cors追加
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -54,6 +58,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+# Reactのローカルホストを追加
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000',
 ]
 
 ROOT_URLCONF = 'learning_REST_API.urls'
