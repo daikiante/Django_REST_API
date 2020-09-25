@@ -1,0 +1,4 @@
+Django REST Framework でオリジナルのAPIを作る！
+
+ゴール : ReactのaxiosやfetchからAPIを叩いてデータを取得したり更新する
+
