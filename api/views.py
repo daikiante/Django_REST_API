@@ -21,7 +21,7 @@ class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer
     
     # 誰でもアクセス可能
-    permission_class = (ProfilePermission,)
+    permission_classes = (ProfilePermission,)
     
 
 class ManageUserView(generics.RetrieveUpdateAPIView):
