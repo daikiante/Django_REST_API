@@ -2,3 +2,15 @@ Django REST Framework でオリジナルのAPIを作る！
 
 ゴール : ReactのaxiosやfetchからAPIを叩いてデータを取得したり更新する
 
+
+
+【DeactとDjangoどちらのサーバーも起動させないと動かないので注意】
+
+/Users/myname/Documents/Projects/learning_REST_API
+
+$ python manage.py runserver
+
+
+/Users/myname/Documents/Projects/learning_REST_API/frontend/react-basic-drf
+
+$ npm start
